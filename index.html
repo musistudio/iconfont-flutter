@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            margin: 0 auto;
+        }
+        #add-file_container {
+            width: 500px;
+            height: 300px;
+            border: 1px dashed #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        #code{
+            max-height: 300px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Iconfont Flutter</h1>
+        </div>
+        <div class="usage">
+            <h2>使用方法</h2>
+            <p>1. 在<a href="https://www.iconfont.cn/">iconfont</a>选择图标加入到项目中</p>
+            <p>2. 在项目管理页将项目图标下载到本地</p>
+            <p>3. 在Flutter项目中pubspec.yml文件的flutter一栏下面加上一下代码
+                <pre>
+fonts:
+    - family: Iconfont
+        fonts: 
+        - asset: assets/fonts/iconfont.ttf
+                </pre>
+            </p>
+            <p>4. 解压缩后将iconfont.ttf文件移动到flutter项目中的assets/fonts文件夹中</p>
+            <p>5. iconfont.css文件拖动到下方框中生成dart代码</p>
+            <p>6. 新建iconfont.dart文件，将代码拷贝进去</p>
+        </div>
+        <div id="add-file_container">
+            将iconfont.json文件拖入框中或点击选择文件
+        </div>
+        <code>
+            <pre id="code"></pre>
+        </code>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
