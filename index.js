@@ -37,7 +37,7 @@ class Iconfont {
     static const _kFontFam = 'Iconfont';
     static const String? _kFontPkg = null;
 
-    ${iconList.map(icon => `static const IconData icon_${icon.font_class} = IconData(0x${icon.unicode}, fontFamily: _kFontFam, fontPackage: _kFontPkg);`).join('\r\n    ')}
+    ${iconList.map(icon => `static const IconData icon_${icon.font_class.replace('-', '_')} = IconData(0x${icon.unicode}, fontFamily: _kFontFam, fontPackage: _kFontPkg);`).join('\r\n    ')}
 }`
     document.getElementById('code').innerHTML = code;
 }
